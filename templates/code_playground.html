@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../static/js/ajax.js"></script>
+    <title>PSAUDL Code Playground</title>
+</head>
+<body>
+    <div class="overlay"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="page-heading">
+                    <h1>Code Editor</h1>
+                    <span class="subheading">Type your code below.</span>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <section id="codeeditor" class="container">
+        <textarea id="editor" type="text" name="editor" rows="30" cols="100" onkeyup="getValue()" style="text-indent: 1.5em;"></textarea>
+        <textarea id="terminal" type="text" name="terminal" rows="30" cols="100" readonly></textarea>
+    </section>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js" data-ace-base="ace" charset="utf-8"></script>
+    <!-- <script>
+    var textareas = document.getElementsByTagName('textarea');
+        var count = textareas.length;
+        for(var i=0;i<count;i++){
+            textareas[i].onkeydown = function(e){
+                if(e.keyCode==9 || e.which==9){
+                    e.preventDefault();
+                    var s = this.selectionStart;
+                    this.value = this.value.substring(0,this.selectionStart) + "\t" + this.value.substring(this.selectionEnd);
+                    this.selectionEnd = s+1; 
+                }
+            }
+        }</script> -->
+</body>
+</html>
